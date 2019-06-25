@@ -2,10 +2,10 @@
 
 namespace Railken\Amethyst\Fakers;
 
+use DateTime;
 use Faker\Factory;
 use Railken\Bag;
 use Railken\Lem\Faker;
-use DateTime;
 
 class CycleFaker extends Faker
 {

@@ -15,14 +15,14 @@ return [
         'started_status' => [
             'options' => [
                 'activation',
-                'reactivation'
-            ]
+                'reactivation',
+            ],
         ],
         'ended_status' => [
             'options' => [
                 'suspension',
-                'termination'
-            ]
-        ]
-    ]
+                'termination',
+            ],
+        ],
+    ],
 ];

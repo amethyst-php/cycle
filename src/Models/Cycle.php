@@ -3,10 +3,10 @@
 namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Railken\Amethyst\Common\ConfigurableModel;
 use Railken\Lem\Contracts\EntityContract;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Cycle extends Model implements EntityContract
 {
@@ -26,7 +26,7 @@ class Cycle extends Model implements EntityContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function cyclable()
+    public function cyclable(): MorphTo
     {
         return $this->morphTo();
     }
