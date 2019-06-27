@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/amethyst-cycle/">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik|Open Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link href='style.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <a class="btn purple">Switch to frontend docs</a>
+  </header>
+  <main>
+    <div class="sidebar" style='display: flex'>
+      <div style='flex-grow: 1'>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href=''>Introduction</a></li>
+                    <li><a href='entity/cycle/'>cycle</a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h2>Result</h2>
+
+<p>Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.</p>
+
+<pre><code class="php">use Railken\Amethyst\Managers\CycleManager;
+
+$manager = new CycleManager();
+
+$result = $manager-&gt;create([
+    "started_at" =&gt; "2019-06-27 10:30:06",
+    "started_status" =&gt; "activation",
+    "ended_At" =&gt; "2019-06-27 10:30:06",
+    "ended_status" =&gt; "termination",
+    "cyclable_type" =&gt; "foo",
+    "cyclable" =&gt; [
+        "name" =&gt; "Lorenzo Wunsch",
+        "description" =&gt; "Voluptatibus molestias numquam aut quas veritatis molestiae. Et error autem consectetur reiciendis sed consequatur hic.",
+        "bar" =&gt; [
+            "name" =&gt; "Prof. Lenore O'Keefe Sr.",
+            "description" =&gt; "Quia soluta delectus et harum. Ipsam ratione minima explicabo iusto velit distinctio. Laudantium maiores consequatur ab repellat. Iure quasi ut veritatis sit facere at similique."
+        ]
+    ]
+]);
+
+if ($result-&gt;ok()) {
+
+    $resource = $result-&gt;getResource();
+
+} else {
+
+    // Loop through all errors
+    $result-&gt;getErrors()-&gt;map(function($error) {
+        return $error-&gt;toArray();
+    }))
+
+    // Retrieve an array of all errors
+    $result-&gt;getSimpleErrors();
+
+    /* The result is something like this:
+
+        [0] =&gt; Array
+            (
+                [code] =&gt; FIELD_NOT_DEFINED
+                [label] =&gt; field
+                [message] =&gt; The field is required
+                [value] =&gt;
+            )
+    */
+
+}
+</code></pre>
+
+<hr />
+
+<p><a href="index.html">Back</a></p>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>
