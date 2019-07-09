@@ -1,26 +1,26 @@
 {
-    "name": "railken/amethyst-cycle",
+    "name": "amethyst/cycle",
     "type": "library",
     "description": "Define a cycle for a subscription, a contract, an activity. Keep track of each cycle defining dates and statuses",
     "keywords": ["laravel", "amethyst", "amethyst-cycle", "cycle"],
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "railken/amethyst-common": "0.1.*"
+        "amethyst/common": "0.1.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
         "orchestra/testbench": "3.*",
-        "railken/amethyst-foo": "0.1.*"
+        "amethyst/foo": "0.1.*"
     },
     "autoload": {
         "psr-4" : {
-            "Railken\\Amethyst\\" : "src/"
+            "Amethyst\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": { 
-            "Railken\\Amethyst\\Tests\\": "tests/" 
+            "Amethyst\\Tests\\": "tests/" 
         }
     },
     "extra": {
@@ -30,7 +30,7 @@
         },
         "laravel": {
             "providers": [
-                "Railken\\Amethyst\\Providers\\CycleServiceProvider"
+                "Amethyst\\Providers\\CycleServiceProvider"
             ]
         }
     }

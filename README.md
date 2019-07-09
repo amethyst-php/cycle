@@ -1,8 +1,8 @@
 # amethyst-cycle
 
-[![Build Status](https://travis-ci.org/railken/amethyst-cycle.svg?branch=master)](https://travis-ci.org/railken/amethyst-cycle)
+[![Build Status](https://travis-ci.org/amethyst-php/cycle.svg?branch=master)](https://travis-ci.org/amethyst-php/cycle)
 
-[Amethyst](https://github.com/railken/amethyst) package.
+[Amethyst](https://github.com/amethyst-php/amethyst) package.
 
 Define a cycle for a subscription, a contract, an activity. Keep track of each cycle defining dates and statuses
 
@@ -15,7 +15,7 @@ PHP 7.1 and later.
 You can install it via [Composer](https://getcomposer.org/) by typing the following command:
 
 ```bash
-composer require railken/amethyst-cycle
+composer require amethyst/cycle
 ```
 
 The package will automatically register itself.
