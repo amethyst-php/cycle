@@ -20,7 +20,7 @@ class CycleSchema extends Schema
             Attributes\EnumAttribute::make('started_status', config('amethyst.cycle.data.cycle.attributes.started_status.options')),
             Attributes\DateTimeAttribute::make('ended_at'),
             Attributes\EnumAttribute::make('ended_status', config('amethyst.cycle.data.cycle.attributes.ended_status.options')),
-            Attributes\EnumAttribute::make('cyclable_type', app('amethyst')->getDataNames())
+            \Amethyst\Core\Attributes\DataNameAttribute::make('cyclable_type')
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('cyclable_id')
                 ->setRelationKey('cyclable_type')
